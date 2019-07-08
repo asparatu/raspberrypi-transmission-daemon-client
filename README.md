@@ -20,6 +20,13 @@ Step-by-step instruction on how to install Transmission Daemon and to config it 
 1. We have make sure Rasbian ropositories update and running the lastest versions.
 We are going to run two commands to update the Rasbian.
 
-```
+```bash
 sudo apt-get update && sudo apt-get dist-upgrade -y
 ```
+## Authors
+
+**Shane Saunders** - *Initial work* - [asparatu](https://github.com/asparatu)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
