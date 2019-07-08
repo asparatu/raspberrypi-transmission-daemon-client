@@ -17,14 +17,15 @@ These instructions will help you install and configure **Transmission Daemon Cli
 
 Step-by-step instruction on how to install Transmission Daemon and to config it and add external storage for storing the torrents. I will assume that you have lastest version of Rasbian Lite installed, If not you can download it from [Raspberry Pi Foundation](https://www.raspberrypi.org).
 
-1. We have make sure Rasbian ropositories update and running the lastest versions.  
+1. We have make sure Rasbian ropositories update and running the lastest versions.
 We are going to run two commands to update the Rasbian.
 
 ```bash
 sudo apt-get update && sudo apt-get dist-upgrade -y
 ```
 
-2. Install Transmission Daemon
+2. Install Transmission Daemon\
+This easy part of this is
 
 ## Authors
 
