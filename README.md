@@ -1,7 +1,3 @@
-<style>
-    li {list-style: none;}
-</style>
-
 # Raspberry Pi Transmission Daemon Setup
 
 Shows how to setup Transmission Client on headless Raspberry Pi installation and external usb hard drive or usb flash drive.
