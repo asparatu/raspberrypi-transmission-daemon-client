@@ -281,6 +281,7 @@ Reboot the Raspberry Pi so the new hostname can be used. You should be able to c
 There is only few things we are going to edit on the configuration file. You can have setup so you need to logon or not and set the hostname and subnet to allows access to the web UI.
 
 What we need we will edit is:
+
 * blocklist-url
 * blocklist-enabled
 * download-dir
@@ -329,7 +330,7 @@ Set the **download-queue-size to **1** or **2** this amount of active torrents b
 "download-queue-size": 1,
 ```
 
-There is **incomplete directory** this used to store all the torrents queue and actively being download. When this are marked complete they are copied the complete directory. 
+There is **incomplete directory** this used to store all the torrents queue and actively being download. When this are marked complete they are copied the complete directory.
 
 We will enable and set the directory.
 
