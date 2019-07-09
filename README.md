@@ -299,7 +299,6 @@ What we need we will edit is:
 * rpc-host-whitelist
 * rpc-host-whitelist-enabled
 * rpc-whitelist-enabled
-* max-peers-global
 * peer-limit-per-torrent
 * peer-port-random-on-start
 
@@ -353,22 +352,10 @@ Set the **peer-limit-per-torrent** to **100** this max number of torrent peers t
 "peer-limit-per-torrent": 100,
 ```
 
-Set the **max-peers-global** to **200** this max number of global peers you can have.
-
-```bash
-"max-peers-global": 200,
-```
-
 Set the **peer-port-random-on-start** to **true** this will make the torrent port to change every time you restart the server or service. This good if your ISP will block current ports.
 
 ```bash
 "peer-port-random-on-start": true,
-```
-
-You should also change **encryption** to **1**, so all the connection will be encrypted.
-
-```bash
-"encryption": 1,
 ```
 
 We going to disable the web ui user security because this will be on local network, but we will set the host white list has enable that.
