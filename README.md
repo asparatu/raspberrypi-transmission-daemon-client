@@ -188,7 +188,7 @@ sudo cp /etc/fstab /etc/fstab.bak
 We need to get the **UUID** of the storage device, the reason we use the **UUID** is, if you add another Usb Storage Device, if could use the same device name as current one and mount of drive can fail.
 
 ```bash
-sudo sudo ls -l /dev/disk/by-uuid/
+sudo ls -l /dev/disk/by-uuid/
 ```
 
 That should display something like this:
