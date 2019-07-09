@@ -339,7 +339,7 @@ We will enable and set the directory.
 "incomplete-dir-enabled": true,
 ```
 
-Set the **peer-limit-per-torrent** to **100** this max number of torrent peers that torrent can have.
+Set the **peer-limit-per-torrent** from **50** to **100** this max number of torrent peers that torrent file can allow you to connect to at one time.
 
 ```bash
 "peer-limit-per-torrent": 100,
@@ -353,10 +353,16 @@ Set the **peer-port-random-on-start** to **true** this will make the torrent por
 
 We going to disable the web ui user security because this will be on local network, but we will set the host white list has enable that.
 
-Set the **rpc-whitelist-enabled** to **false**, which will disable the login function.
+You need to set **rpc-authentication-required** to **false**. If you do not do this, the web ui will not load. The reason why, it waiting for an username and password and we will not be using this part of the web ui.
 
 ```bash
-"rpc-whitelist-enabled": false,
+ "rpc-authentication-required": false,  
+```
+
+Set the **rpc-host-whitelist**, which will be the hostname of the Raspberry Pi and mDNS hostname. the hostname of test Raspberry Pi i am using is **testserver**.
+
+```bash
+"rpc-host-whitelist": "testserver, testserver.local",
 ```
 
 Set the **rpc-host-whitelist-enabled** to **true**, which will let any host to connect to the web ui.
@@ -365,10 +371,10 @@ Set the **rpc-host-whitelist-enabled** to **true**, which will let any host to c
 "rpc-host-whitelist-enabled": true,
 ```
 
-Set the **rpc-host-whitelist**, which will be the hostname of the Raspberry Pi and mDNS hostname. the hostname of test Raspberry Pi i am using is **testserver**.
+Set the **rpc-whitelist-enabled** to **false**, which will disable the login function.
 
 ```bash
-"rpc-host-whitelist": "testserver, testserver.local",
+"rpc-whitelist-enabled": false,
 ```
 
 At this point you are done, save the file by pressing **ctrl + x**, press **y** then press **enter**
