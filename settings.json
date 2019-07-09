@@ -48,7 +48,7 @@
     "rpc-enabled": true,
     "rpc-host-whitelist": "testserver, testserver.local",
     "rpc-host-whitelist-enabled": true,
-    "rpc-password": "{b0ff7eb75ba1aab9c119e455e3a33edf4068eae9BT5RYypW",
+    "rpc-password": "{41089d559677f58b720d1f039c10a3f7cf9720918i2GhiHy,
     "rpc-port": 9091,
     "rpc-url": "/transmission/",
     "rpc-username": "pi",
