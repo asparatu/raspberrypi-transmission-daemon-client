@@ -1,4 +1,4 @@
-#### 9. How to change the default hostname
+# How to change the default hostname
 
 We are going to change the default hostname of the Raspberry Pi becauase all new installation have hostname **raspberrypi**.
 
