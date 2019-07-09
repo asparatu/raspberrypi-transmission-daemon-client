@@ -351,7 +351,7 @@ Set the **peer-port-random-on-start** to **true** this will make the torrent por
 "peer-port-random-on-start": true,
 ```
 
-We going to disable the web ui user security because this will be on local network, but we will set the host white list has enable that.
+We going to disable the web ui user security because it will be hosted on local network, but we still will enable host whitelist.
 
 You need to set **rpc-authentication-required** to **false**. If you do not do this, the web ui will not load. The reason why, it waiting for an username and password and we will not be using this part of the web ui.
 
