@@ -254,7 +254,7 @@ you should see the **/dev/sda1** mounted to **/media/storage**
 
 #### 9. How to change the default hostname
 
-We are going to change the default hostname of the Raspberry Pi becauase all new installation have hostname **raspberrypi**.
+We are going to change the default hostname of the Raspberry Pi because all new installation have hostname **raspberrypi**.
 
 We are going to edit the **hosts** and **hostname** file in the **etc** directory.
 
