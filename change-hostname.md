@@ -20,4 +20,4 @@ sudo nano /etc/hostname
 
 Change the **raspberrypi** to what you changed in **hosts** file and save the file.
 
-Reboot the Raspberry Pi so the new hostname can be used. You should be able to connect to the Raspberry Pi using **(yourhostname).local** instead of **raspberrypi.local**.
+Reboot the Raspberry Pi so the new hostname can take affect. You should be able to connect to the Raspberry Pi using **(yourhostname).local** instead of **raspberrypi.local**.
