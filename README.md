@@ -280,6 +280,127 @@ Reboot the Raspberry Pi so the new hostname can be used. You should be able to c
 
 There is only few things we are going to edit on the configuration file. You can have setup so you need to logon or not and set the hostname and subnet to allows access to the web UI.
 
+What we need we will edit is:
+* blocklist-url
+* blocklist-enabled
+* download-dir
+* download-queue-size
+* incomplete-dir
+* incomplete-dir-enabled
+* rpc-host-whitelist
+* rpc-host-whitelist-enabled
+* rpc-whitelist-enabled
+* max-peers-global
+* peer-limit-per-torrent
+* peer-port-random-on-start
+
+The first thing we need to do is stop the transmission daemon service, if we do not do this any changes made will be over written by default file.
+
+You need to enter this command:
+
+```bash
+sudo service transmission-daemon stop
+```
+
+We can now edit the settings.json file.
+
+```bash
+sudo nano /etc/transmission-daemon/settings.json
+```
+
+The first thing we will edit and enable the blocklist. This has list of malicious added not to download from. In the web UI, you have to download the list. To do that, click **Edit Preferences**, click **Peers**, then click **Update**
+
+```bash
+"blocklist-enabled": true,
+"blocklist-url": "http://list.iblocklist.com/?list=ydxerpxkpcfqjaybcssw&fileformat=p2p&archiveformat=gz",
+```
+
+We are going to set the download preferences.
+
+Set the **download-dir** to the **complete** directory.
+
+```bash
+"download-dir": "/media/storage/torrent/complete",
+```
+
+Set the **download-queue-size to **1** or **2** this amount of active torrents being download at once. Depending on your connection speed, they will download fast even at 1 or 2.
+
+```bash
+"download-queue-size": 1,
+```
+
+There is **incomplete directory** this used to store all the torrents queue and actively being download. When this are marked complete they are copied the complete directory. 
+
+We will enable and set the directory.
+
+```bash
+"incomplete-dir": "/media/data/torrent/inprogress",
+"incomplete-dir-enabled": true,
+```
+
+Set the **peer-limit-per-torrent** to **100** this max number of torrent peers that torrent can have.
+
+```bash
+"peer-limit-per-torrent": 100,
+```
+
+Set the **max-peers-global** to **200** this max number of global peers you can have.
+
+```bash
+"max-peers-global": 200,
+```
+
+Set the **peer-port-random-on-start** to **true** this will make the torrent port to change every time you restart the server or service. This good if your ISP will block current ports.
+
+```bash
+"peer-port-random-on-start": true,
+```
+
+You should also change **encryption** to **1**, so all the connection will be encrypted.
+
+```bash
+"encryption": 1,
+```
+
+We going to disable the web ui user security because this will be on local network, but we will set the host white list has enable that.
+
+Set the **rpc-whitelist-enabled** to **false**, which will disable the login function.
+
+```bash
+"rpc-whitelist-enabled": false,
+```
+
+Set the **rpc-host-whitelist-enabled** to **true**, which will let any host to connect to the web ui.
+
+```bash
+"rpc-host-whitelist-enabled": true,
+```
+
+Set the **rpc-host-whitelist**, which will be the hostname of the Raspberry Pi and mDNS hostname. the hostname of test Raspberry Pi i am using is **testserver**.
+
+```bash
+"rpc-host-whitelist": "testserver, testserver.local",
+```
+
+At this point you are done, save the file by pressing **ctrl + x**, press **y** then press **enter**
+
+Reboot the Raspberry Pi
+
+```bash
+sudo reboot
+```
+
+In order to connect to the Transmission Client, you need to open your web browser and use the mDNS URL or ip address with port 9019.
+
+```bash
+http://testserver.local:9091
+http://192.168.2.100:9091
+```
+
+When you add torrent you can copy and paste the link or magnet link in **enter a Url**. You can also drop and drag one torrent file to the **choice file** button. If you click the **choice file** button, you can at multiple torrent file at once that will be added.
+
+You can delete the torrent or just remove the torrent files and leave the data. If want to delete the file, just right click and choice **Trash Data and Remove from List**. You can remove more then one at once.
+
 ## Authors
 
 **Shane Saunders** - *Initial work* - [asparatu](https://github.com/asparatu)
