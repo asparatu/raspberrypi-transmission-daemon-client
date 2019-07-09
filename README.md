@@ -151,6 +151,14 @@ sudo chown pi:pi /media/storage
 
 We are going to create two directories to store the torrents in, one will be for **completed** and one will be fore **incomplete** torrents.
 
+Move into the **storage** directory
+
+```bash
+cd storage
+```
+
+Type these commands to create the torrent directories
+
 ```bash
 mkdir torrent
 mkdir torrent/complete
